@@ -1,0 +1,73 @@
+name: Propose a vocabulary term
+description: Suggest a specialized word sense observed in frontier-LLM-generated text.
+title: "Add vocabulary term: "
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing an observation. Provide enough context to distinguish the intended word sense. Do not include confidential prompts, personal information, or private session content.
+
+  - type: input
+    id: term
+    attributes:
+      label: Term
+      description: Enter the word or established English phrase exactly as it appeared.
+      placeholder: e.g., load-bearing
+    validations:
+      required: true
+
+  - type: dropdown
+    id: part_of_speech
+    attributes:
+      label: Part of speech
+      description: Select every applicable grammatical role.
+      multiple: true
+      options:
+        - Noun or noun phrase
+        - Verb
+        - Adjective
+        - Adverb
+        - Other or uncertain
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Representative usage
+      description: Provide one or two complete example statements that establish the intended sense. A faithful paraphrase is acceptable when the original text cannot be shared.
+      placeholder: The model wrote or conveyed...
+    validations:
+      required: true
+
+  - type: textarea
+    id: intended_sense
+    attributes:
+      label: Intended specialized sense
+      description: Explain what the term means here and how this differs from its ordinary meaning or other technical senses.
+    validations:
+      required: true
+
+  - type: input
+    id: model
+    attributes:
+      label: Model family
+      description: Optional. Identify the model family when it can be shared.
+      placeholder: e.g., Claude, GPT, Gemini, or another frontier model
+
+  - type: input
+    id: observation_date
+    attributes:
+      label: Observation date
+      description: Optional. Give the date or approximate period of observation.
+      placeholder: YYYY-MM-DD or approximate period
+
+  - type: checkboxes
+    id: publication
+    attributes:
+      label: Publication check
+      options:
+        - label: This submission is suitable for a public English-language glossary and contains no confidential or personal information.
+          required: true

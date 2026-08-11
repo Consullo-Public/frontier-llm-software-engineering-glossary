@@ -925,7 +925,8 @@ The connections and integration configuration that allow components to communica
 
 ## Adding a term
 
-Open an issue or pull request with the observed term, enough surrounding context
+Open a [vocabulary proposal](https://github.com/Consullo-Public/frontier-llm-software-engineering-glossary/issues/new?template=vocabulary-term.yml)
+or pull request with the observed term, enough surrounding context
 to establish its intended sense, and—when it can be shared—the model family and
 observation date. New entries should follow this order: term, example statement,
 gloss, then genus and differentia. Place entries alphabetically. Do not include
