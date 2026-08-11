@@ -22,117 +22,872 @@ Each entry uses the same fields:
 
 ## Terms
 
-### contract
+### affinity
 
-**Contract** (as used in generated text from a frontier LLM)
+**Affinity** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
 
 **Example statement**
 
-> “Once the new response shape lands, we must treat the existing API contract as
-> load-bearing; any change that surfaces extra fields without updating the
-> contract will break downstream clients.”
+> “Session affinity keeps follow-up requests on the worker that already holds the conversation cache.”
 
 **Gloss**
 
-The agreed-upon interface or behavioral specification that one part of a system
-promises to uphold for others, as in “API contract,” “implementation contract,”
-“prompt contract,” or “behavioral contract.” In frontier-LLM text—especially
-Claude and coding agents—it is frequently invoked to stress the stable,
-enforceable shape of expectations, schemas, and guarantees rather than the
-concrete code that currently fulfills them.
+A preference or constraint that associates related work, data, or agents with a particular resource or group. It commonly appears in scheduling, placement, clustering, and routing descriptions.
 
 **Genus and differentia**
 
-- **Genus:** A noun referring to an explicit agreement or specification that
-  governs the interaction between components.
-- **Differentia:** The formal, binding definition of expected inputs, outputs,
-  behavior, invariants, and constraints for an API, function, module, prompt,
-  agent, or system—such that deviations constitute a violation, independent of
-  the current implementation details.
+- **Genus:** A noun denoting preferential association.
+- **Differentia:** The association makes some pairings more desirable or likely than otherwise equivalent alternatives.
+
+### atomic
+
+**Atomic** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Make the state update atomic so readers never observe the new index with the old metadata.”
+
+**Gloss**
+
+Indivisible from the system’s perspective: the operation is applied completely or not at all. Frontier-LLM text extends the database sense to commits, edits, tool actions, and reasoning steps that should not expose a partially completed state.
+
+**Genus and differentia**
+
+- **Genus:** An adjective describing a unit of work, state transition, or change.
+- **Differentia:** The unit has no externally observable partial-success state and succeeds or fails as one whole.
+
+### blast radius
+
+**Blast radius** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Keep the configuration change behind one service boundary so its blast radius excludes unrelated agents.”
+
+**Gloss**
+
+The total scope of systems, users, data, or behavior that could be affected by a failure or change. The phrase imports an explosion metaphor into risk analysis and is often used to justify isolation, staged rollout, or narrow permissions.
+
+**Genus and differentia**
+
+- **Genus:** A noun phrase denoting the reach of an effect.
+- **Differentia:** It emphasizes the maximum plausible spread of harmful or unintended consequences from one initiating event.
+
+### blocker
+
+**Blocker** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Missing production credentials are the only blocker; the implementation and verification plan are complete.”
+
+**Gloss**
+
+A condition that prevents meaningful progress until it is resolved. In agentic text, the label often distinguishes a hard dependency from an inconvenience, risk, or task that can proceed in parallel.
+
+**Genus and differentia**
+
+- **Genus:** A noun referring to an impediment or unmet dependency.
+- **Differentia:** The impediment makes the next required action unavailable, rather than merely slower or less convenient.
+
+### boundary
+
+**Boundary** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Validate the payload at the tool boundary before untrusted fields enter the planner.”
+
+**Gloss**
+
+The conceptual edge between systems, modules, trust zones, responsibilities, or stages. Frontier models frequently treat boundaries as the places where contracts are enforced, data is translated, and ownership changes.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting an edge or division between domains.
+- **Differentia:** It separates components with different responsibilities, representations, trust assumptions, or governing contracts.
+
+### canonical
+
+**Canonical** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Normalize aliases at ingestion and store only the canonical agent identifier.”
+
+**Gloss**
+
+Authoritative, preferred, or normalized among several equivalent representations. In generated technical text, calling something canonical usually means other forms should resolve to it and should not compete with it as independent truths.
+
+**Genus and differentia**
+
+- **Genus:** An adjective describing a representation, source, name, or procedure.
+- **Differentia:** It is designated as the standard reference form to which alternatives are reduced or compared.
+
+### cleanly
+
+**Cleanly** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The retry policy lands cleanly because it changes no success-path semantics and leaves no stale timers.”
+
+**Gloss**
+
+Without collateral effects, ambiguity, leakage, residue, or awkward integration. Frontier-LLM prose often uses the adverb as a broad positive judgment when a more specific claim—such as backward-compatible, isolated, or warning-free—could be stated.
+
+**Genus and differentia**
+
+- **Genus:** An adverb characterizing how a change, operation, or concept fits or completes.
+- **Differentia:** It asserts an absence of undesirable secondary effects or unresolved integration mess.
+
+### contract
+
+**Contract** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Once the new response shape lands, we must treat the existing API contract as load-bearing; any change that surfaces extra fields without updating the contract will break downstream clients.”
+
+**Gloss**
+
+The agreed-upon interface or behavioral specification that one part of a system promises to uphold for others, as in “API contract,” “implementation contract,” “prompt contract,” or “behavioral contract.” In frontier-LLM text—especially Claude and coding agents—it is frequently invoked to stress the stable, enforceable shape of expectations, schemas, and guarantees rather than the concrete code that currently fulfills them.
+
+**Genus and differentia**
+
+- **Genus:** A noun referring to an explicit agreement or specification that governs the interaction between components.
+- **Differentia:** The formal, binding definition of expected inputs, outputs, behavior, invariants, and constraints for an API, function, module, prompt, agent, or system—such that deviations constitute a violation, independent of the current implementation details.
+
+### decisive
+
+**Decisive** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “A checksum mismatch is decisive evidence that the downloaded artifact is not the one we built.”
+
+**Gloss**
+
+Sufficiently clear or discriminating to settle a live question or select an action. Agent-generated analysis often uses the word for evidence, tests, or interventions that collapse several plausible branches into one.
+
+**Genus and differentia**
+
+- **Genus:** An adjective describing evidence, a test, an action, or a conclusion.
+- **Differentia:** It resolves the relevant choice without leaving material alternatives tied or ambiguous.
+
+### divergence
+
+**Divergence** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The first divergence appears after tool selection, when the replay chooses a different repository.”
+
+**Gloss**
+
+A split or growing deviation between states, behaviors, implementations, traces, or expectations that previously matched. In LLM evaluation it often names the earliest point where two runs cease to be equivalent.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting separation between comparable paths or states.
+- **Differentia:** The compared things share a reference point or expected correspondence and then cease to agree.
+
+### drift
+
+**Drift** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Long tool traces caused context drift: the agent still followed the task topic but no longer honored the output contract.”
+
+**Gloss**
+
+Gradual, often unnoticed divergence from an intended goal, state, meaning, distribution, or specification. Common compounds include goal drift, context drift, schema drift, and semantic drift.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting change away from a reference condition over time.
+- **Differentia:** The deviation accumulates progressively without a single explicit decision to abandon the reference.
+
+### end-to-end
+
+**End-to-end** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The unit tests pass, but only an end-to-end run proves that the browser receives the executor’s error.”
+
+**Gloss**
+
+Covering the complete operational path from initial input through every necessary integration to the final externally relevant result. Frontier models use it to contrast whole-system evidence with isolated component checks.
+
+**Genus and differentia**
+
+- **Genus:** An adjective describing the scope of a process, test, trace, or capability.
+- **Differentia:** The scope includes both terminal endpoints and the intervening components without substituting mocks for the material path.
+
+### fallback
+
+**Fallback** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “If structured decoding is unavailable, the fallback returns validated plain text rather than failing the request.”
+
+**Gloss**
+
+A predefined alternative behavior used when the preferred path is unavailable or unsuccessful. The term can denote either the alternative itself or the transition policy that selects it.
+
+**Genus and differentia**
+
+- **Genus:** A noun referring to a secondary path, value, component, or behavior.
+- **Differentia:** It is activated by failure or unavailability of a preferred option and preserves some intended function.
+
+### floor
+
+**Floor** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The deterministic baseline is a quality floor: learned routing may improve on it but may not regress below it.”
+
+**Gloss**
+
+The minimum acceptable, guaranteed, or observed level of quality, safety, performance, or capability. It is used as the lower-bound counterpart to a ceiling.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting a lower bound or baseline.
+- **Differentia:** Values below it are disallowed, unacceptable, or outside the promised operating range.
+
+### footgun
+
+**Footgun** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Allowing an empty target to mean the workspace root is a footgun, even if the deletion command asks for confirmation.”
+
+**Gloss**
+
+A feature, default, or interface that makes a damaging mistake unusually easy for its own user. Unlike an ordinary hazard, a footgun implicates the design’s invitation to misuse, not merely the severity of the outcome.
+
+**Genus and differentia**
+
+- **Genus:** A noun referring to a dangerous design feature or usage pattern.
+- **Differentia:** Normal or plausible use can readily trigger self-inflicted harm because the interface does not adequately prevent or expose the mistake.
+
+### framing
+
+**Framing** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Treating every alert as an outage is the wrong framing; these alerts are defect-discovery evidence.”
+
+**Gloss**
+
+The conceptual presentation and boundary choices that determine how a problem, observation, or proposal is interpreted. Generated analysis often changes the framing to expose different goals, variables, or solution classes.
+
+**Genus and differentia**
+
+- **Genus:** A noun referring to an interpretive formulation of a subject.
+- **Differentia:** It selects which aspects are foregrounded, what counts as the problem, and which responses appear relevant.
+
+### gap
+
+**Gap** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The implementation supports retries, but there is a verification gap around partially written checkpoints.”
+
+**Gloss**
+
+A missing capability, connection, case, control, or body of evidence within otherwise expected coverage. Frontier models often use gap as a generic diagnosis that should be refined by naming exactly what is absent.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting an absence within an expected structure or coverage set.
+- **Differentia:** Something required for continuity, completeness, or confidence is missing between present elements.
+
+### gating / gated
+
+**Gating / gated** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Production deployment is gated on the migration test and an explicit operator approval.”
+
+**Gloss**
+
+Conditional control of whether an action, feature, transition, or resource becomes available. The gate may be a test, permission, feature flag, threshold, or policy decision.
+
+**Genus and differentia**
+
+- **Genus:** A verb or participial adjective describing controlled passage to a subsequent state.
+- **Differentia:** Progress is withheld until a named condition or authority permits it.
+
+### guard / guardrail
+
+**Guard / guardrail** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The path validator is a guardrail that stops the agent before a broad recursive deletion can begin.”
+
+**Gloss**
+
+A protective constraint, check, or boundary intended to prevent an unsafe or undesirable action while allowing normal operation. In LLM systems the term spans prompt rules, validators, permissions, runtime checks, and policy enforcement.
+
+**Genus and differentia**
+
+- **Genus:** A noun referring to a preventive control.
+- **Differentia:** It constrains action before harm occurs rather than merely detecting or repairing the outcome afterward.
+
+### handoff
+
+**Handoff** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The planner’s handoff includes the selected branch, supporting evidence, unresolved risks, and the next executable action.”
+
+**Gloss**
+
+A deliberate transfer of control, context, work, or responsibility between agents, tools, workflow stages, or people. A clean handoff preserves enough state for the receiver to continue without reconstructing the task.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting a transfer between participants or stages.
+- **Differentia:** Operational responsibility passes to a receiver together with the context needed to assume it.
+
+### handover
+
+**Handover** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Before the overnight handover, record which experiment is running and what result should trigger intervention.”
+
+**Gloss**
+
+A transfer of ownership, authority, or ongoing operational context to another actor. It overlaps with handoff but often implies a broader or more sustained change of responsibility rather than one item moving through a pipeline.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting transfer of an ongoing responsibility or controlled asset.
+- **Differentia:** The receiving actor assumes continuing ownership or authority, not merely the next isolated step.
+
+### harness
+
+**Harness** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The evaluation harness injects prompts, captures tool traces, enforces budgets, and scores the final artifact.”
+
+**Gloss**
+
+The surrounding execution, test, or evaluation framework that drives a model or agent and observes or constrains its behavior. It is external to the target under test even when it supplies much of the target’s operating context.
+
+**Genus and differentia**
+
+- **Genus:** A noun referring to a supporting control and observation framework.
+- **Differentia:** It invokes a target under defined conditions while mediating inputs, outputs, constraints, and measurements.
+
+### honest
+
+**Honest** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Return an honest error that names the missing capability instead of fabricating a successful result.”
+
+**Gloss**
+
+Accurately reflecting evidence, capability, uncertainty, or internal state without creating a misleading impression. Frontier-model prose applies the moral adjective to signals, errors, interfaces, and representations whose value lies in faithful disclosure.
+
+**Genus and differentia**
+
+- **Genus:** An adjective describing a report, signal, interface, estimate, or behavior.
+- **Differentia:** Its outward representation does not conceal material limitations, uncertainty, failure, or mismatch with reality.
+
+### instrument
+
+**Instrument** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Instrument the queue boundary with latency, depth, and rejection counters before changing the scheduler.”
+
+**Gloss**
+
+To add measurement, tracing, logging, or other observability mechanisms to a system. The verb emphasizes modifying the target so later behavior produces interpretable evidence.
+
+**Genus and differentia**
+
+- **Genus:** A verb describing the addition of observation capabilities.
+- **Differentia:** Measurement points are embedded in or around a process so its runtime state and behavior become inspectable.
+
+### invariant
+
+**Invariant** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The recovery invariant is that every accepted job is either completed or durably returned to the queue.”
+
+**Gloss**
+
+A property that must remain true across relevant operations, states, or executions. In generated design text, invariants turn broad correctness goals into stable conditions that implementations and tests can enforce.
+
+**Genus and differentia**
+
+- **Genus:** A noun referring to a persistent property or condition.
+- **Differentia:** It is required to hold throughout a defined range of state transitions, not only at one endpoint.
 
 ### land
 
-**Land** (as used in generated text from a frontier LLM)
+**Land** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
 
 **Example statement**
 
-> “Six commits landed on master; the parse-error fix finally lands as a clean UI
-> surface rather than a silent log entry.”
+> “Six commits landed on master; the parse-error fix finally lands as a clean UI surface rather than a silent log entry.”
 
 **Gloss**
 
-To successfully take effect, be merged or deployed, register with an audience,
-or achieve the intended impact. In LLM-generated text—especially text
-characteristic of Claude and similar frontier models—it is overused both in
-technical or software contexts (“the PR landed”) and in narrative or evaluative
-prose (“that landed differently” or “this lands as progress”), functioning as a
-stylistic tic for “succeeded,” “hit home,” or “came across as.”
+To successfully take effect, be merged or deployed, register with an audience, or achieve the intended impact. In LLM-generated text—especially text characteristic of Claude and similar frontier models—it is overused both in technical or software contexts (“the PR landed”) and in narrative or evaluative prose (“that landed differently” or “this lands as progress”), functioning as a stylistic tic for “succeeded,” “hit home,” or “came across as.”
 
 **Genus and differentia**
 
-- **Genus:** A verb, often in the past tense as “landed” or the present tense as
-  “lands,” describing the successful arrival, impact, or reception of something.
-- **Differentia:** Applied specifically to a change, commit, remark, joke, point,
-  emotional effect, or outcome that successfully takes effect, registers, or
-  hits home—frequently in a non-literal, idiomatic sense that signals completion
-  or resonance rather than physical descent.
+- **Genus:** A verb, often in the past tense as “landed” or the present tense as “lands,” describing the successful arrival, impact, or reception of something.
+- **Differentia:** Applied specifically to a change, commit, remark, joke, point, emotional effect, or outcome that successfully takes effect, registers, or hits home—frequently in a non-literal, idiomatic sense that signals completion or resonance rather than physical descent.
+
+### lean
+
+**Lean** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Keep the first implementation lean: one queue, one retry policy, and no speculative plugin layer.”
+
+**Gloss**
+
+Minimal, efficient, and tightly limited to what is presently useful. In frontier-LLM writing it positively characterizes designs with little excess structure, though the term can obscure which costs or capabilities were actually removed.
+
+**Genus and differentia**
+
+- **Genus:** An adjective describing an implementation, plan, interface, or organization.
+- **Differentia:** It contains little beyond the elements required for its stated purpose and near-term constraints.
+
+### leverage
+
+**Leverage** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Leverage the existing replay corpus to test the new router before collecting another dataset.”
+
+**Gloss**
+
+To use an existing asset, mechanism, or fact as a multiplier for another objective. Frontier models frequently use the verb where the more precise “use,” “reuse,” “derive,” or “exploit” would identify the actual relationship.
+
+**Genus and differentia**
+
+- **Genus:** A verb describing advantageous use of a resource or capability.
+- **Differentia:** The resource is presented as amplifying impact or reducing effort beyond its immediate function.
 
 ### load-bearing
 
-**Load-bearing** (as used in text generated by frontier LLMs such as Claude and
-related models)
+**Load-bearing** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
 
 **Example statement**
 
-> “The sentence ‘Always summarize the plan before executing’ in the system prompt
-> is load-bearing; removing it lets the agent skip verification and ship silent
-> failures.”
+> “The sentence ‘Always summarize the plan before executing’ in the system prompt is load-bearing; removing it lets the agent skip verification and ship silent failures.”
 
 **Gloss**
 
-Critical or foundational in a supporting role, by analogy to a load-bearing wall
-in architecture. The part holds up more than its surface appearance suggests;
-other elements depend on it, so its absence or change breaks important
-functionality, coherence, or correctness—frequently in a tacit or accidental way
-rather than an explicitly documented one. In LLM-generated text, the term is
-applied metaphorically to claims, premises, prompt instructions, code comments,
-tests, design choices, and similar elements.
+Critical or foundational in a supporting role, by analogy to a load-bearing wall in architecture. The part holds up more than its surface appearance suggests; other elements depend on it, so its absence or change breaks important functionality, coherence, or correctness—frequently in a tacit or accidental way rather than an explicitly documented one. In LLM-generated text, the term is applied metaphorically to claims, premises, prompt instructions, code comments, tests, design choices, and similar elements.
 
 **Genus and differentia**
 
-- **Genus:** An adjective applying to a component, element, assumption, sentence,
-  instruction, piece of code, prompt, text, or similar part of a larger system,
-  argument, or structure.
-- **Differentia:** One that carries essential structural weight, such that
-  removing, weakening, or altering it would cause significant—often
-  non-obvious—failure or collapse of the whole.
+- **Genus:** An adjective applying to a component, element, assumption, sentence, instruction, piece of code, prompt, text, or similar part of a larger system, argument, or structure.
+- **Differentia:** One that carries essential structural weight, such that removing, weakening, or altering it would cause significant—often non-obvious—failure or collapse of the whole.
+
+### mint
+
+**Mint** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The coordinator mints a fresh run ID only after the request passes validation.”
+
+**Gloss**
+
+To create and issue a new token, identifier, credential, record, or other recognized artifact. The metaphor implies not just generation but authoritative introduction into a governed namespace or system.
+
+**Genus and differentia**
+
+- **Genus:** A verb describing creation and issuance.
+- **Differentia:** The new object receives authoritative identity, validity, or standing at the moment it is created.
+
+### mirror / mirrors
+
+**Mirror / mirrors** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The local adapter mirrors the production response contract but replaces network calls with deterministic fixtures.”
+
+**Gloss**
+
+To reproduce or accurately reflect another component’s structure, state, behavior, or organization. Generated technical text uses the mirror metaphor for copies whose usefulness depends on continued correspondence with an original.
+
+**Genus and differentia**
+
+- **Genus:** A verb, or occasionally a noun, denoting reflective correspondence.
+- **Differentia:** One component is intentionally kept structurally or behaviorally aligned with a reference component.
+
+### orchestrate
+
+**Orchestrate** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The controller orchestrates retrieval, planning, tool execution, and verification without implementing those capabilities itself.”
+
+**Gloss**
+
+To coordinate multiple components, agents, or steps so their ordered interactions achieve a larger objective. The term often implies centralized sequencing and dependency management while leaving the actual work to specialized participants.
+
+**Genus and differentia**
+
+- **Genus:** A verb describing coordination of multiple actors or operations.
+- **Differentia:** It manages their timing, dependencies, and information flow as one composite process.
+
+### parity
+
+**Parity** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The Rust client has feature parity with the Python client but not yet performance parity.”
+
+**Gloss**
+
+Relevant equivalence between versions, platforms, interfaces, or implementations. The word should be qualified by the dimension being matched because parity rarely means identity in every respect.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting equivalence across compared systems.
+- **Differentia:** The systems meet the same stated capability, behavior, or performance criterion despite differing implementations.
+
+### probe
+
+**Probe** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Send a read-only probe at the timeout boundary to learn whether the executor is slow, dead, or merely disconnected.”
+
+**Gloss**
+
+A deliberate, bounded test or observation intended to reveal a system’s state, behavior, limit, or response. A probe is usually chosen for information gain rather than direct remediation.
+
+**Genus and differentia**
+
+- **Genus:** A noun or verb referring to an investigative test.
+- **Differentia:** It perturbs or queries a target in a controlled way to discriminate among live hypotheses.
+
+### residue
+
+**Residue** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Cancellation removes the job but leaves lock-file residue that blocks the next run.”
+
+**Gloss**
+
+State, context, files, side effects, or assumptions left behind after the operation that created them is supposedly complete. The term frames leftovers as evidence of incomplete cleanup or isolation.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting a remainder after a process.
+- **Differentia:** The remainder persists beyond its intended lifetime and may influence later behavior.
+
+### round-trip
+
+**Round-trip** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The serializer must round-trip unknown fields without changing their names or values.”
+
+**Gloss**
+
+A complete outward-and-return cycle, such as request and response, encode and decode, or transform and reverse-transform. Success usually means the returned result preserves a specified relationship to the original.
+
+**Genus and differentia**
+
+- **Genus:** A noun, adjective, or verb describing a two-way cycle.
+- **Differentia:** The operation traverses a path and its return or inverse so preservation and total-cycle behavior can be assessed.
+
+### scaffold / scaffolding / scaffolded
+
+**Scaffold / scaffolding / scaffolded** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The generated tests scaffold the migration: they establish the contract before the production implementation changes.”
+
+**Gloss**
+
+A supporting structure that enables construction, reasoning, execution, or learning. It may be temporary, like generated setup code, or remain as the framework around which later work is organized.
+
+**Genus and differentia**
+
+- **Genus:** A noun, verb, or participial adjective denoting support for further construction or performance.
+- **Differentia:** It supplies structure needed to build or carry out something else rather than being the primary result itself.
+
+### seam / seams
+
+**Seam / seams** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The repository interface is the natural seam for injecting a fault without changing storage code.”
+
+**Gloss**
+
+A boundary or join between modules, layers, responsibilities, or representations where substitution, inspection, or change can occur with limited disturbance. Good seams expose useful control points; hidden seams create coupling surprises.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting a join or interface within a larger system.
+- **Differentia:** The boundary provides a practical point for separating, replacing, observing, or modifying adjacent concerns.
+
+### settles
+
+**Settles** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “After replaying delayed events, the replica settles on the same state as the primary.”
+
+**Gloss**
+
+Comes to rest in a stable interpretation, value, design, or system state after uncertainty or activity. Frontier-generated prose often uses it for convergence without naming the exact convergence rule.
+
+**Genus and differentia**
+
+- **Genus:** A verb describing transition toward stability or resolution.
+- **Differentia:** Competing, changing, or provisional states give way to one persistent outcome.
 
 ### shape
 
-**Shape** (as used in generated text from a frontier LLM)
+**Shape** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
 
 **Example statement**
 
-> “What’s the shape of the change? Once we land the PR, the new response shape
-> should surface cleanly in the UI without breaking the existing contract.”
+> “What’s the shape of the change? Once we land the PR, the new response shape should surface cleanly in the UI without breaking the existing contract.”
 
 **Gloss**
 
-The abstract form, structure, or characteristic configuration of something,
-especially something technical or organizational. In frontier-LLM text—most
-characteristically Claude and Claude Code—it functions as a versatile, overused
-catch-all for “what it looks like,” “how it is structured,” or “the pattern it
-follows,” appearing in phrases such as “the shape of the API,” “response shape,”
-or “the correct shape is….”
+The abstract form, structure, or characteristic configuration of something, especially something technical or organizational. In frontier-LLM text—most characteristically Claude and Claude Code—it functions as a versatile, overused catch-all for “what it looks like,” “how it is structured,” or “the pattern it follows,” appearing in phrases such as “the shape of the API,” “response shape,” or “the correct shape is….”
 
 **Genus and differentia**
 
-- **Genus:** A noun, often in “the shape of X” or simply “shape,” referring to the
-  form, structure, or configuration of something abstract.
-- **Differentia:** Used as a generic, all-purpose placeholder for the overall
-  structure, schema, signature, layout, interface, contract, outline, or pattern
-  of an API, response, change, system, team, conversation, or other non-physical
-  entity—frequently substituting for more precise technical terms.
+- **Genus:** A noun, often in “the shape of X” or simply “shape,” referring to the form, structure, or configuration of something abstract.
+- **Differentia:** Used as a generic, all-purpose placeholder for the overall structure, schema, signature, layout, interface, contract, outline, or pattern of an API, response, change, system, team, conversation, or other non-physical entity—frequently substituting for more precise technical terms.
+
+### silently
+
+**Silently** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The parser silently discards malformed records, so operators see data loss as a successful import.”
+
+**Gloss**
+
+Without emitting an error, warning, log, state change, or other signal visible to the relevant observer. In failure descriptions, the adverb highlights an observability defect rather than mere quiet execution.
+
+**Genus and differentia**
+
+- **Genus:** An adverb describing an operation or failure’s signaling behavior.
+- **Differentia:** A material event occurs without the notification or evidence needed for an affected observer to detect it.
+
+### spine
+
+**Spine** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The event log is the system’s spine; projections, audits, and recovery all attach to it.”
+
+**Gloss**
+
+The central organizing backbone of an architecture, workflow, or argument. Components depend on or attach to the spine, making it both structurally important and a guide to the system’s overall organization.
+
+**Genus and differentia**
+
+- **Genus:** A noun metaphor for a central supporting structure.
+- **Differentia:** It provides the primary line of organization and support to which multiple major parts connect.
+
+### stale
+
+**Stale** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Reject the approval if its policy version is stale relative to the request being executed.”
+
+**Gloss**
+
+Outdated enough that information, cached state, context, or a decision can no longer be trusted as current. Staleness is relational: the artifact may be internally valid but superseded by a newer reference state.
+
+**Genus and differentia**
+
+- **Genus:** An adjective describing information or state whose currency matters.
+- **Differentia:** A later relevant change has invalidated the assumption that the described value still represents present reality.
+
+### substrate
+
+**Substrate** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The durable event store is the substrate on which memory retrieval and audit projections are built.”
+
+**Gloss**
+
+An underlying technical or conceptual base layer that supports higher-level structures or capabilities. The term emphasizes what later systems depend on while abstracting away the base layer’s internal details.
+
+**Genus and differentia**
+
+- **Genus:** A noun metaphor for an underlying foundation or medium.
+- **Differentia:** Higher-level components are realized on top of it and depend on its persistent capabilities or properties.
+
+### surface
+
+**Surface** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Surface the executor’s rejection in the API response instead of leaving it only in a debug log.”
+
+**Gloss**
+
+To make information, behavior, state, or an error visible at a relevant interface or level of attention. Frontier models often use the verb as an all-purpose alternative to expose, display, report, propagate, or discover.
+
+**Genus and differentia**
+
+- **Genus:** A verb describing movement into visibility or accessibility.
+- **Differentia:** Something previously hidden, internal, implicit, or difficult to notice becomes available to the observer who needs it.
+
+### tension
+
+**Tension** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “There is a real tension between replay determinism and adapting tool selection to current system health.”
+
+**Gloss**
+
+A persistent tradeoff or incompatibility between desirable goals, constraints, interpretations, or forces. The term signals that improving one side may pressure the other and that the conflict should be managed rather than rhetorically erased.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting opposition between simultaneously relevant considerations.
+- **Differentia:** The considerations cannot all be maximized together under the current constraints.
+
+### trajectory
+
+**Trajectory** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “One successful tool call does not establish the trajectory; inspect whether verification quality improves across the full run.”
+
+**Gloss**
+
+The path and direction of development of a process, agent, conversation, metric, or system over time. It emphasizes the evolving sequence and likely continuation rather than one isolated state.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting a time-ordered path of change.
+- **Differentia:** The sequence has direction or momentum from which development, progress, or deviation can be assessed.
+
+### transient
+
+**Transient** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Treat the first connection reset as transient, but escalate if retries reveal a stable failure signature.”
+
+**Gloss**
+
+Temporary and not expected to persist as a durable condition. In reliability prose, the label commonly justifies retry or observation, but it should remain a tested hypothesis rather than an excuse to ignore recurrence.
+
+**Genus and differentia**
+
+- **Genus:** An adjective describing a state, error, object, or effect.
+- **Differentia:** Its lifetime is brief relative to the process and it disappears without a lasting change to the governing state.
+
+### truth / source of truth
+
+**Truth / source of truth** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The signed manifest is the source of truth for deployed versions; dashboards are derived views.”
+
+**Gloss**
+
+The designated authoritative reference for a fact, identity, configuration, or state when multiple representations exist. The phrase is governance shorthand: disagreements are resolved in favor of that source unless its authority is explicitly revised.
+
+**Genus and differentia**
+
+- **Genus:** A noun or noun phrase denoting an authoritative representation.
+- **Differentia:** It has precedence when copies or derived views disagree about the same governed fact.
+
+### verdict
+
+**Verdict** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The evaluator’s verdict is inconclusive because the trace proves failure but not which component caused it.”
+
+**Gloss**
+
+A final or decision-relevant judgment produced after evaluation. Agentic systems use the term for pass/fail determinations, classifications, and synthesized conclusions that are meant to drive a next action.
+
+**Genus and differentia**
+
+- **Genus:** A noun referring to an evaluative judgment.
+- **Differentia:** It concludes a defined assessment and is presented as the assessment’s operative determination.
+
+### wiring / wired
+
+**Wiring / wired** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The handler exists, but it is not wired into the route table or the dependency container.”
+
+**Gloss**
+
+The connections and integration configuration that allow components to communicate and participate in a running system. Frontier models use the electrical metaphor for registration, dependency injection, event routing, callbacks, and tool bindings.
+
+**Genus and differentia**
+
+- **Genus:** A noun or participial adjective denoting system connections.
+- **Differentia:** It concerns how already-defined components are linked into operational data, control, or dependency paths.
 
 ## Adding a term
 
@@ -142,6 +897,10 @@ observation date. New entries should follow this order: term, example statement,
 gloss, then genus and differentia. Place entries alphabetically. Do not include
 confidential prompts, personal information, or unverifiable claims about who
 coined a term.
+
+Repository contributors should add entries to [`glossary.json`](glossary.json)
+and run `python3 scripts/render_glossary.py`. That structured source renders both
+this Markdown edition and the equivalent searchable HTML edition.
 
 This glossary is maintained by the
 [Consullo Public organization](https://github.com/Consullo-Public).
