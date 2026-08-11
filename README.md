@@ -719,6 +719,23 @@ The abstract form, structure, or characteristic configuration of something, espe
 - **Genus:** A noun, often in “the shape of X” or simply “shape,” referring to the form, structure, or configuration of something abstract.
 - **Differentia:** Used as a generic, all-purpose placeholder for the overall structure, schema, signature, layout, interface, contract, outline, or pattern of an API, response, change, system, team, conversation, or other non-physical entity—frequently substituting for more precise technical terms.
 
+### ship
+
+**Ship** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Ship the guarded tool-calling path to a small cohort before enabling it for every agent.”
+
+**Gloss**
+
+To release, deploy, or otherwise deliver a change so it becomes available to its intended users or operating environment. In frontier-LLM and coding-agent prose, ship often marks the transition from implementation or review to real-world availability, and may also be used more loosely for completing and delivering an artifact.
+
+**Genus and differentia**
+
+- **Genus:** A verb describing the release or delivery of a change, feature, system, or artifact.
+- **Differentia:** The work becomes available or usable beyond its development context, rather than merely being written, tested, or reviewed.
+
 ### silently
 
 **Silently** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
