@@ -22,6 +22,34 @@ Each entry uses the same fields:
 
 ## Terms
 
+### contract
+
+**Contract** (as used in generated text from a frontier LLM)
+
+**Genus and differentia**
+
+- **Genus:** A noun referring to an explicit agreement or specification that
+  governs the interaction between components.
+- **Differentia:** The formal, binding definition of expected inputs, outputs,
+  behavior, invariants, and constraints for an API, function, module, prompt,
+  agent, or system—such that deviations constitute a violation, independent of
+  the current implementation details.
+
+**Gloss**
+
+The agreed-upon interface or behavioral specification that one part of a system
+promises to uphold for others, as in “API contract,” “implementation contract,”
+“prompt contract,” or “behavioral contract.” In frontier-LLM text—especially
+Claude and coding agents—it is frequently invoked to stress the stable,
+enforceable shape of expectations, schemas, and guarantees rather than the
+concrete code that currently fulfills them.
+
+**Example statement**
+
+> “Once the new response shape lands, we must treat the existing API contract as
+> load-bearing; any change that surfaces extra fields without updating the
+> contract will break downstream clients.”
+
 ### land
 
 **Land** (as used in generated text from a frontier LLM)
