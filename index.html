@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An observational glossary of specialized software-engineering word senses found in frontier-LLM-generated text.">
+  <meta property="og:title" content="Frontier LLM Software Engineering Glossary">
+  <meta property="og:description" content="Familiar words, specialized senses, and representative technical examples.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#102a43">
+  <title>Frontier LLM Software Engineering Glossary</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17212b;
+      --muted: #52616f;
+      --paper: #fbfaf6;
+      --surface: #ffffff;
+      --line: #d9dfdf;
+      --accent: #0b6e69;
+      --accent-dark: #07514d;
+      --warm: #d88b39;
+      --shadow: 0 14px 40px rgb(21 43 52 / 8%);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 90% 0%, rgb(216 139 57 / 12%), transparent 30rem),
+        linear-gradient(180deg, #f2f7f5 0, var(--paper) 26rem);
+      font: 17px/1.68 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a { color: var(--accent-dark); }
+    a:hover { color: var(--accent); }
+
+    .site-header {
+      padding: 4.8rem 1.4rem 3.2rem;
+      border-bottom: 1px solid rgb(11 110 105 / 15%);
+    }
+
+    .header-inner,
+    main,
+    .footer-inner {
+      width: min(860px, 100%);
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 .8rem;
+      color: var(--accent-dark);
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+      line-height: 1.14;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.35rem, 7vw, 4.8rem);
+      font-weight: 650;
+      letter-spacing: -.035em;
+    }
+
+    .lede {
+      max-width: 680px;
+      margin: 1.3rem 0 0;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+
+    main { padding: 3rem 1.4rem 5rem; }
+
+    .method {
+      margin-bottom: 2.8rem;
+      padding: 1.4rem 1.5rem;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--warm);
+      border-radius: 0 12px 12px 0;
+      background: rgb(255 255 255 / 72%);
+    }
+
+    .method h2,
+    .contribute h2 {
+      margin: 0 0 .65rem;
+      font-size: 1.3rem;
+    }
+
+    .method p,
+    .contribute p { margin: 0; }
+
+    .search-wrap { margin-bottom: 2rem; }
+
+    label {
+      display: block;
+      margin-bottom: .45rem;
+      color: var(--muted);
+      font-size: .88rem;
+      font-weight: 700;
+    }
+
+    #term-search {
+      width: 100%;
+      padding: .85rem 1rem;
+      border: 1px solid #b9c6c5;
+      border-radius: 9px;
+      background: var(--surface);
+      color: var(--ink);
+      font: inherit;
+      box-shadow: 0 2px 8px rgb(21 43 52 / 4%);
+    }
+
+    #term-search:focus {
+      border-color: var(--accent);
+      outline: 3px solid rgb(11 110 105 / 15%);
+    }
+
+    .result-count {
+      min-height: 1.5em;
+      margin: .45rem 0 0;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .entry {
+      scroll-margin-top: 1.4rem;
+      padding: clamp(1.4rem, 4vw, 2.3rem);
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .entry h2 {
+      display: flex;
+      align-items: baseline;
+      gap: .55rem;
+      margin: 0 0 .4rem;
+      font-size: clamp(2rem, 5vw, 3rem);
+      letter-spacing: -.02em;
+    }
+
+    .anchor {
+      opacity: 0;
+      color: var(--accent);
+      font: 500 1rem/1 system-ui, sans-serif;
+      text-decoration: none;
+      transition: opacity .15s ease;
+    }
+
+    .entry h2:hover .anchor,
+    .anchor:focus { opacity: 1; }
+
+    .usage-note {
+      margin: 0 0 1.6rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .field { margin-top: 1.55rem; }
+
+    .field h3 {
+      margin: 0 0 .45rem;
+      color: var(--accent-dark);
+      font: 750 .78rem/1.3 system-ui, sans-serif;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .field p, .field ul { margin-top: 0; }
+    .field ul { padding-left: 1.35rem; }
+    .field li + li { margin-top: .55rem; }
+
+    blockquote {
+      margin: .7rem 0 0;
+      padding: 1rem 1.2rem;
+      border-left: 3px solid var(--accent);
+      background: #f2f8f7;
+      font-family: ui-serif, Georgia, serif;
+      font-size: 1.08rem;
+    }
+
+    .contribute {
+      margin-top: 2.6rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+    }
+
+    footer {
+      padding: 1.7rem 1.4rem 2.5rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    footer p { margin: 0; }
+
+    [hidden] { display: none !important; }
+
+    @media (max-width: 540px) {
+      .site-header { padding-top: 3rem; }
+      .entry { border-radius: 10px; }
+      .anchor { opacity: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .anchor { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">Consullo Public</p>
+      <h1>Frontier LLM Software Engineering Glossary</h1>
+      <p class="lede">Familiar words and phrases used with specialized software-engineering senses in text generated by frontier large language models.</p>
+    </div>
+  </header>
+
+  <main>
+    <aside class="method" aria-labelledby="method-heading">
+      <h2 id="method-heading">Scope and editorial method</h2>
+      <p>This glossary records usage, not coinage. An entry means that the listed sense has been observed in model-generated technical text; it does not imply that an LLM invented the term or that every model uses it consistently. Definitions describe the sense in context, and examples are editorial illustrations unless explicitly cited.</p>
+    </aside>
+
+    <div class="search-wrap" role="search">
+      <label for="term-search">Find a term or phrase</label>
+      <input id="term-search" type="search" placeholder="Search the glossary…" autocomplete="off">
+      <p id="result-count" class="result-count" aria-live="polite"></p>
+    </div>
+
+    <section id="load-bearing" class="entry" data-search="load-bearing load bearing critical foundational supporting structural prompt instruction code premise test design">
+      <h2>load-bearing <a class="anchor" href="#load-bearing" aria-label="Permanent link to load-bearing">#</a></h2>
+      <p class="usage-note"><strong>Load-bearing</strong> (as used in text generated by frontier LLMs such as Claude and related models)</p>
+
+      <div class="field">
+        <h3>Genus and differentia</h3>
+        <ul>
+          <li><strong>Genus:</strong> An adjective applying to a component, element, assumption, sentence, instruction, piece of code, prompt, text, or similar part of a larger system, argument, or structure.</li>
+          <li><strong>Differentia:</strong> One that carries essential structural weight, such that removing, weakening, or altering it would cause significant—often non-obvious—failure or collapse of the whole.</li>
+        </ul>
+      </div>
+
+      <div class="field">
+        <h3>Gloss</h3>
+        <p>Critical or foundational in a supporting role, by analogy to a load-bearing wall in architecture. The part holds up more than its surface appearance suggests; other elements depend on it, so its absence or change breaks important functionality, coherence, or correctness—frequently in a tacit or accidental way rather than an explicitly documented one. In LLM-generated text, the term is applied metaphorically to claims, premises, prompt instructions, code comments, tests, design choices, and similar elements.</p>
+      </div>
+
+      <div class="field">
+        <h3>Example statement</h3>
+        <blockquote>“The sentence ‘Always summarize the plan before executing’ in the system prompt is load-bearing; removing it lets the agent skip verification and ship silent failures.”</blockquote>
+      </div>
+    </section>
+
+    <p id="no-results" hidden>No glossary entries match that search.</p>
+
+    <section class="contribute" aria-labelledby="contribute-heading">
+      <h2 id="contribute-heading">Adding a term</h2>
+      <p>Open an <a href="https://github.com/Consullo-Public/frontier-llm-software-engineering-glossary/issues/new">issue</a> or pull request with the observed term, enough surrounding context to establish its intended sense, and—when it can be shared—the model family and observation date. New entries use four fields: genus, differentia, gloss, and example statement. Do not include confidential prompts or personal information.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>Maintained by the <a href="https://github.com/Consullo-Public">Consullo Public organization</a>. <a href="https://github.com/Consullo-Public/frontier-llm-software-engineering-glossary/blob/main/README.md">Read the Markdown edition</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    const search = document.querySelector('#term-search');
+    const entries = [...document.querySelectorAll('.entry')];
+    const count = document.querySelector('#result-count');
+    const empty = document.querySelector('#no-results');
+
+    function filterEntries() {
+      const query = search.value.trim().toLocaleLowerCase();
+      let visible = 0;
+
+      for (const entry of entries) {
+        const matches = !query || entry.dataset.search.toLocaleLowerCase().includes(query) || entry.textContent.toLocaleLowerCase().includes(query);
+        entry.hidden = !matches;
+        visible += Number(matches);
+      }
+
+      empty.hidden = visible !== 0;
+      count.textContent = query ? `${visible} ${visible === 1 ? 'entry' : 'entries'} found` : `${entries.length} ${entries.length === 1 ? 'entry' : 'entries'}`;
+    }
+
+    search.addEventListener('input', filterEntries);
+    filterEntries();
+  </script>
+</body>
+</html>
