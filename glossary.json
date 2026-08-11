@@ -10,6 +10,14 @@
       "differentia": "The unit has no externally observable partial-success state and succeeds or fails as one whole."
     },
     {
+      "term": "belt-and-suspenders",
+      "slug": "belt-and-suspenders",
+      "example": "Keep both checksum verification and schema validation; the belt-and-suspenders design lets either control catch corruption the other misses.",
+      "gloss": "Deliberately protected by two or more overlapping safeguards, by analogy to wearing both a belt and suspenders to hold up trousers. In frontier-LLM technical text, the phrase characterizes conservative designs that accept some redundancy so one control can cover another’s failure mode.",
+      "genus": "An adjective or noun phrase describing a defensive design, check, or procedure.",
+      "differentia": "It uses independent, partly redundant safeguards against the same undesirable outcome rather than relying on a single control."
+    },
+    {
       "term": "blast radius",
       "slug": "blast-radius",
       "example": "Keep the configuration change behind one service boundary so its blast radius excludes unrelated agents.",

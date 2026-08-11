@@ -56,6 +56,23 @@ Indivisible from the system’s perspective: the operation is applied completely
 - **Genus:** An adjective describing a unit of work, state transition, or change.
 - **Differentia:** The unit has no externally observable partial-success state and succeeds or fails as one whole.
 
+### belt-and-suspenders
+
+**Belt-and-suspenders** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Keep both checksum verification and schema validation; the belt-and-suspenders design lets either control catch corruption the other misses.”
+
+**Gloss**
+
+Deliberately protected by two or more overlapping safeguards, by analogy to wearing both a belt and suspenders to hold up trousers. In frontier-LLM technical text, the phrase characterizes conservative designs that accept some redundancy so one control can cover another’s failure mode.
+
+**Genus and differentia**
+
+- **Genus:** An adjective or noun phrase describing a defensive design, check, or procedure.
+- **Differentia:** It uses independent, partly redundant safeguards against the same undesirable outcome rather than relying on a single control.
+
 ### blast radius
 
 **Blast radius** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
