@@ -79,6 +79,33 @@ tests, design choices, and similar elements.
 > is load-bearing; removing it lets the agent skip verification and ship silent
 > failures.”
 
+### shape
+
+**Shape** (as used in generated text from a frontier LLM)
+
+**Genus and differentia**
+
+- **Genus:** A noun, often in “the shape of X” or simply “shape,” referring to the
+  form, structure, or configuration of something abstract.
+- **Differentia:** Used as a generic, all-purpose placeholder for the overall
+  structure, schema, signature, layout, interface, contract, outline, or pattern
+  of an API, response, change, system, team, conversation, or other non-physical
+  entity—frequently substituting for more precise technical terms.
+
+**Gloss**
+
+The abstract form, structure, or characteristic configuration of something,
+especially something technical or organizational. In frontier-LLM text—most
+characteristically Claude and Claude Code—it functions as a versatile, overused
+catch-all for “what it looks like,” “how it is structured,” or “the pattern it
+follows,” appearing in phrases such as “the shape of the API,” “response shape,”
+or “the correct shape is….”
+
+**Example statement**
+
+> “What’s the shape of the change? Once we land the PR, the new response shape
+> should surface cleanly in the UI without breaking the existing contract.”
+
 ## Adding a term
 
 Open an issue or pull request with the observed term, enough surrounding context
