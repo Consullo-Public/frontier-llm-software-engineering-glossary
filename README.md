@@ -260,6 +260,23 @@ A predefined alternative behavior used when the preferred path is unavailable or
 - **Genus:** A noun referring to a secondary path, value, component, or behavior.
 - **Differentia:** It is activated by failure or unavailability of a preferred option and preserves some intended function.
 
+### flag
+
+**Flag** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The dry-run flag prevents writes, and the verifier flags any output that violates the response contract.”
+
+**Gloss**
+
+A named option or marker that records or controls a condition; as a verb, to mark something for attention or action. In frontier-LLM technical text, flags commonly select agent or tool behavior, gate experimental paths, store boolean state, or identify findings for review.
+
+**Genus and differentia**
+
+- **Genus:** A noun referring to an option or marker, or a verb describing the act of marking.
+- **Differentia:** It represents or calls attention to a discrete condition that downstream code, an agent, or a reviewer can test and act on.
+
 ### floor
 
 **Floor** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)

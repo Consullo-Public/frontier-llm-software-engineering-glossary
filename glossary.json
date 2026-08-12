@@ -426,6 +426,15 @@
       "gloss": "A preference or constraint that associates related work, data, or agents with a particular resource or group. It commonly appears in scheduling, placement, clustering, and routing descriptions.",
       "genus": "A noun denoting preferential association.",
       "differentia": "The association makes some pairings more desirable or likely than otherwise equivalent alternatives."
+    },
+    {
+      "term": "flag",
+      "slug": "flag",
+      "source_issue": 4,
+      "example": "The dry-run flag prevents writes, and the verifier flags any output that violates the response contract.",
+      "gloss": "A named option or marker that records or controls a condition; as a verb, to mark something for attention or action. In frontier-LLM technical text, flags commonly select agent or tool behavior, gate experimental paths, store boolean state, or identify findings for review.",
+      "genus": "A noun referring to an option or marker, or a verb describing the act of marking.",
+      "differentia": "It represents or calls attention to a discrete condition that downstream code, an agent, or a reviewer can test and act on."
     }
   ]
 }
