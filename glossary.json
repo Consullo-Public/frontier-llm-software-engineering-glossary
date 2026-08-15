@@ -91,6 +91,15 @@
       "differentia": "The deviation accumulates progressively without a single explicit decision to abandon the reference."
     },
     {
+      "term": "edge",
+      "slug": "edge",
+      "source_issue": 6,
+      "example": "The planner stores each tool dependency as a directed edge, so it can reject a cycle before execution.",
+      "gloss": "A connection between two nodes in a graph representation. In frontier-LLM technical and agentic text, the graph may be explicit in code or used conceptually to describe dependencies, transitions, tool relationships, or information flow.",
+      "genus": "A noun denoting a relationship in a graph.",
+      "differentia": "It joins a pair of nodes and may carry a direction, label, weight, or other property of that specific connection."
+    },
+    {
       "term": "end-to-end",
       "slug": "end-to-end",
       "example": "The unit tests pass, but only an end-to-end run proves that the browser receives the executor’s error.",
@@ -410,6 +419,15 @@
       "gloss": "A final or decision-relevant judgment produced after evaluation. Agentic systems use the term for pass/fail determinations, classifications, and synthesized conclusions that are meant to drive a next action.",
       "genus": "A noun referring to an evaluative judgment.",
       "differentia": "It concludes a defined assessment and is presented as the assessment’s operative determination."
+    },
+    {
+      "term": "wedged",
+      "slug": "wedged",
+      "source_issue": 7,
+      "example": "The worker still passes its health check, but its agent loop is wedged and no queued task can advance.",
+      "gloss": "Stuck in a state where execution cannot make progress even though the process or service remains present and may still be reported as alive. In agentic systems, the term often describes a model endpoint, worker, or orchestration loop that has silently stopped producing useful responses without cleanly terminating.",
+      "genus": "An adjective describing a process, service, agent, or pipeline in a stuck operational state.",
+      "differentia": "The execution remains nominally active or detectable but cannot advance normally without timeout, restart, cancellation, or other intervention."
     },
     {
       "term": "wiring / wired",

@@ -226,6 +226,23 @@ Gradual, often unnoticed divergence from an intended goal, state, meaning, distr
 - **Genus:** A noun denoting change away from a reference condition over time.
 - **Differentia:** The deviation accumulates progressively without a single explicit decision to abandon the reference.
 
+### edge
+
+**Edge** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The planner stores each tool dependency as a directed edge, so it can reject a cycle before execution.”
+
+**Gloss**
+
+A connection between two nodes in a graph representation. In frontier-LLM technical and agentic text, the graph may be explicit in code or used conceptually to describe dependencies, transitions, tool relationships, or information flow.
+
+**Genus and differentia**
+
+- **Genus:** A noun denoting a relationship in a graph.
+- **Differentia:** It joins a pair of nodes and may carry a direction, label, weight, or other property of that specific connection.
+
 ### end-to-end
 
 **End-to-end** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
@@ -922,6 +939,23 @@ A final or decision-relevant judgment produced after evaluation. Agentic systems
 
 - **Genus:** A noun referring to an evaluative judgment.
 - **Differentia:** It concludes a defined assessment and is presented as the assessment’s operative determination.
+
+### wedged
+
+**Wedged** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “The worker still passes its health check, but its agent loop is wedged and no queued task can advance.”
+
+**Gloss**
+
+Stuck in a state where execution cannot make progress even though the process or service remains present and may still be reported as alive. In agentic systems, the term often describes a model endpoint, worker, or orchestration loop that has silently stopped producing useful responses without cleanly terminating.
+
+**Genus and differentia**
+
+- **Genus:** An adjective describing a process, service, agent, or pipeline in a stuck operational state.
+- **Differentia:** The execution remains nominally active or detectable but cannot advance normally without timeout, restart, cancellation, or other intervention.
 
 ### wiring / wired
 
