@@ -141,6 +141,23 @@ Authoritative, preferred, or normalized among several equivalent representations
 - **Genus:** An adjective describing a representation, source, name, or procedure.
 - **Differentia:** It is designated as the standard reference form to which alternatives are reduced or compared.
 
+### clamp
+
+**Clamp** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)
+
+**Example statement**
+
+> “Clamp the requested concurrency to the runner’s supported range before sending the job.”
+
+**Gloss**
+
+To restrict a numeric value to a specified minimum and maximum, replacing an out-of-range input with the nearest bound. In frontier-LLM technical text, the verb commonly appears in parameter validation, safety limits, resource caps, and normalization.
+
+**Genus and differentia**
+
+- **Genus:** A verb describing bounded numeric normalization.
+- **Differentia:** Values inside the permitted interval are preserved, while values below or above it are replaced by the corresponding endpoint.
+
 ### cleanly
 
 **Cleanly** (as used in generated text from frontier LLMs, especially Claude and coding/agent models)

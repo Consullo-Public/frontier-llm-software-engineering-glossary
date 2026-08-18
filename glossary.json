@@ -51,6 +51,15 @@
       "differentia": "It is designated as the standard reference form to which alternatives are reduced or compared."
     },
     {
+      "term": "clamp",
+      "slug": "clamp",
+      "source_issue": 8,
+      "example": "Clamp the requested concurrency to the runner’s supported range before sending the job.",
+      "gloss": "To restrict a numeric value to a specified minimum and maximum, replacing an out-of-range input with the nearest bound. In frontier-LLM technical text, the verb commonly appears in parameter validation, safety limits, resource caps, and normalization.",
+      "genus": "A verb describing bounded numeric normalization.",
+      "differentia": "Values inside the permitted interval are preserved, while values below or above it are replaced by the corresponding endpoint."
+    },
+    {
       "term": "cleanly",
       "slug": "cleanly",
       "example": "The retry policy lands cleanly because it changes no success-path semantics and leaves no stale timers.",
